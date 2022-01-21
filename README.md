@@ -1,6 +1,6 @@
 # SonOfIDA
 reversed malware\
-this repository contains both the source exe and dll\
+this repository contains both the source exe and dll (with the ida files containing all my comments)\
 as well as a C code I produced for both\
 Anatomy is quite simple:\
 exe: add exports for everything kernel32.dll exports in the dll but make it a forward export\

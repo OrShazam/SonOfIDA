@@ -206,7 +206,7 @@ LPVOID rva2va(DWORD rva, PIMAGE_NT_HEADERS ntHdrs, LPVOID base){
 PIMAGE_SECTION_HEADER GetSectionByRVA(DWORD rva, PIMAGE_NT_HEADERS ntHdrs){
 	PIMAGE_SECTION_HEADER pSectHdrs;
 	pSectHdrs = (PIMAGE_SECTION_HEADER)
-		(ntHdrs + sizeof(DWORD) + sizeof(IMAGE_FILE_HEADER) + ntHdrs->FileHeader.SizeOfOptionalHeader);
+		((char*)ntHdrs + sizeof(DWORD) + sizeof(IMAGE_FILE_HEADER) + ntHdrs->FileHeader.SizeOfOptionalHeader);
 		
 	WORD numSections = ntHdrs->FileHeader.NumberOfSections;
 	DWORD sectAddr;
